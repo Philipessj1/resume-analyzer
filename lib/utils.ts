@@ -1,5 +1,5 @@
 // Converts a file size in bytes into a human-readable format (e.g., "1.25 MB")
-export function formatSize(bytes: number): string {
+export const formatSize = (bytes: number): string => {
   // If the value is 0, return immediately
   if (bytes === 0) return '0 Bytes';
 
@@ -15,3 +15,5 @@ export function formatSize(bytes: number): string {
   // Convert the size to the chosen unit and format with 2 decimal places
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
+
+export const generateUUID = () => crypto.randomUUID();
