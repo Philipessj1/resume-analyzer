@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { usePuterStore } from "lib/puter";
 
-export function meta({}: Route.MetaArgs) {
+export const meta = () => {
   return [
     { title: "Resume Analyzer" },
     { name: "description", content: "Smart feedback for your dream job!" },
